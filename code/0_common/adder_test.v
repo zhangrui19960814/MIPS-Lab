@@ -65,7 +65,18 @@ module adder_test;
         Ain =`WORD'd1023;
         Bin =`WORD'd1;
         #100;
+        // more test
+        Ain =`WORD'd58984575;
+        Bin =`WORD'd2154879571;
+        #100;
         
+        Ain =`WORD'd56987451879;
+        Bin =`WORD'd963852741;
+        #100;
+        
+        Ain =`WORD'd123455543;
+        Bin =`WORD'd44432131;
+        #100;
 	end
       
 endmodule
