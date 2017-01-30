@@ -13,6 +13,7 @@
 `define SW    6'b101011
 `define BEQ   6'b000100
 
+
 `define F_ADD 6'b100000
 `define F_SUB 6'b100010
 `define F_AND 6'b100100

@@ -1,4 +1,5 @@
-`timescale 1ns / 1ps
+`include "definitions.vh"
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -25,11 +26,11 @@
 module adder_test;
 
 	// Inputs
-	reg Ain;
-	reg Bin;
+	reg [`WORD-1:0] Ain;
+	reg [`WORD-1:0] Bin;
 
 	// Outputs
-	wire add_out;
+	wire [`WORD-1:0] add_out;
 
 	// Instantiate the Unit Under Test (UUT)
 	adder uut (
@@ -40,14 +41,31 @@ module adder_test;
 
 	initial begin
 		// Initialize Inputs
-		Ain = 0;
-		Bin = 0;
+		Ain = `WORD'd0;
+		Bin = `WORD'd0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
         
+        Ain = `WORD'd1;
+        Bin = `WORD'd1;
+        
+        #100;
 		// Add stimulus here
-
+   
+        Ain =`WORD'd4398046511102;
+        Bin =`WORD'd1;
+        
+        #100;
+        //Overflow test
+        Ain =`WORD'd4398046511103;
+        Bin =`WORD'd1;
+        #100;
+        //Carry test
+        Ain =`WORD'd1023;
+        Bin =`WORD'd1;
+        #100;
+        
 	end
       
 endmodule
