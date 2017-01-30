@@ -1,14 +1,14 @@
 `include "definitions.vh"
 
 module mux_test;
-`define halfsize  16
- 
-	reg [15:0] Ain;
-	reg [15:0] Bin;
-	reg control;
-	wire [15:0] mux_out;
 
-	mux#(16) uut (
+ 
+	reg [4:0] Ain;
+	reg [4:0] Bin;
+	reg control;
+	wire [4:0] mux_out;
+
+	mux#(5) uut (
 		.Ain(Ain), 
 		.Bin(Bin), 
 		.control(control), 
@@ -16,42 +16,43 @@ module mux_test;
 	);
 
 	initial begin
-		Ain <=`WORD'b0; ;
-		Bin <= `WORD'b1;
+		Ain <= 5'b00000; ;
+		Bin <= 5'b00001;
 		control <= 0;
         #10;
-        Ain <= `WORD'b0;
-		Bin <= `WORD'b1;
+        Ain <= 5'b00000;
+		Bin <= 5'b00001;
 		control <= 1;
         #10;
         
-        Ain <= `WORD'b1;
-        Bin <= `WORD'b0;
+        Ain <= 5'b00001;
+        Bin <= 5'b00000;
         control <= 0;
         #10;      
-        Ain <= `WORD'b1;
-        Bin <= `WORD'b0;
+        Ain <= 5'b00001;
+        Bin <= 5'b00000;
         control <= 1;
         #10;
                         
-        Ain <= `WORD'd11;
-        Bin <= `WORD'd111;
+        Ain <= 5'b00011;
+        Bin <= 5'b00111;
         control <= 0;
         #10;
-        Ain <= `WORD'd11;
-        Bin <= `WORD'd111;
+        Ain <= 5'b00011;
+        Bin <= 5'b00111;
         control <= 1;
         #10;
         
-        Ain <= `WORD'd255;
-        Bin <= `WORD'd210;
+        Ain <= 5'b11111;
+        Bin <= 5'b10101;
         control <= 0;
         #10;
-        Ain <= `WORD'd255;
-        Bin <= `WORD'd210;
+        Ain <= 5'b11111;
+        Bin <= 5'b10101;
         control <= 1;
         #10;
-                
+          
+           
 	end
       
 endmodule
