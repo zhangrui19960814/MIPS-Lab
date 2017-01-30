@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="mux_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="mux_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="4" />
+   <wvobject db_ref_id="1" fp_name="/mux_test/Ain" type="array">
+      <obj_property name="ElementShortName">Ain[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Ain[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/mux_test/Bin" type="array">
+      <obj_property name="ElementShortName">Bin[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Bin[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/mux_test/control" type="logic">
+      <obj_property name="ElementShortName">control</obj_property>
+      <obj_property name="ObjectShortName">control</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/mux_test/mux_out" type="array">
+      <obj_property name="ElementShortName">mux_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mux_out[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
