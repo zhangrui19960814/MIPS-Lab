@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{graphicx} % new way of doing eps files
+\usepackage{listings} % nice code layout
+\usepackage[usenames]{color} % color
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{graphgray}{gray}{0.7}
+\definecolor{ans}{rgb}{1,0,0}
+\definecolor{blue}{rgb}{0,0,1}
+% \Verilog{title}{label}{file}
+\newcommand{\Verilog}[3]{
+  \lstset{language=Verilog}
+  \lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+  \lstset{linewidth=\textwidth}
+  \lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+  \lstset{frame=tb}
+  \lstinputlisting[caption={#1},label={#2}]{#3}
+}
+
+
+\author{Rui Zhang and Evan Stewart}
+\title{Lab 2}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+The objective of this lab is to write two test bench to testing an adder and a multiplexor. 
+
+\section{Interface}
+$The two inputs in adder are Ain and Bin. The output is add_out. They are all wires (not reg) because it must continuously assign a value, and regs cannot be continously driven. Then we just give the simple code that the output is the sum of the two inputs.\-
+Multiplexor (aka mux) has three inputs Ain, Bin and control and one output mux_out. A mux is a simple device that connects one of the inputs to the outputs based on how the selector (control) is set. Size parameter is default to set as 8 and all variables are set as 5 bit in test bench. 
+$
+
+\section{Design}
+We want to see carry and overflow in order to check the adder to see if it works. We also test some number randomly. Same thing we want to check the mux by setting inputs and selector randomly and see the result.
+
+\section{Implementation}
+The following codes are our implement to the adder and mux.
+
+%\Verilog{Testbench for testing an adder.}{code:reg}{../code/adder.v}
+%\Verilog{Testbench for testing a mux.}{code:reg}{../code/mux.v}
+
+\section{Test Bench Design}
+The following codes are our testbench to test adder and mux.
+\Verilog{Testbench for testing an adder.}{code:regtest}{../code/adder_test.v}
+\Verilog{Testbench for testing a mux.}{code:regtest}{../code/mux_test.v}
+
+\section{Simulation}
+In this section you should show the results of your simulation, such as timing diagrams and explain any design issues you had to deal with.  A sample timing diagram is in Figure~\ref{fig:regtest} on page~\pageref{fig:regtest}.
+
+\begin{figure}
+\begin{center}
+%\caption{Timing diagram for the register test.}\label{fig:regtest}
+%\includegraphics[width=0.9\textwidth]{../images/registertiming.png}
+\end{center}
+\end{figure}
+
+\section{Conclusions}
+Overview the main points you want to stick in peoples minds and answer key questions you want to stick in peoples minds.  Did it work?  How well? What would you have done differently?  What did you learn?
+\end{document} 
