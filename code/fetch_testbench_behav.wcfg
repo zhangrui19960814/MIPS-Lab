@@ -18,17 +18,21 @@
    <wvobject db_ref_id="1" fp_name="/fetch_testbench/pc" type="array">
       <obj_property name="ElementShortName">pc[31:0]</obj_property>
       <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/fetch_testbench/instruction" type="array">
       <obj_property name="ElementShortName">instruction[31:0]</obj_property>
       <obj_property name="ObjectShortName">instruction[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/fetch_testbench/i" type="array">
       <obj_property name="ElementShortName">i[31:0]</obj_property>
       <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/fetch_testbench/uut/imem" type="array">
       <obj_property name="ElementShortName">imem[1023:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">imem[1023:0][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
